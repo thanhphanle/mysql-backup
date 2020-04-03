@@ -1,12 +1,12 @@
 # mysql-backup
-A simple way to backup MySQL database in bash script
+A simple way to backup MySQL database in bash script, this script is a copy from author Rahul Kumar.
 
 ## How to setup in CentOS
 
 **Step 1.** Clone or copy sh script into your machine at directory `/opt/scripts`
 
 **Step 2.** Open script file and update config in section below:
-```properties
+```sh
 DB_BACKUP_PATH='/home/backup/mysql'
 MYSQL_HOST='localhost'
 MYSQL_PORT='3306'
