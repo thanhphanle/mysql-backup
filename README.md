@@ -18,14 +18,14 @@ BACKUP_RETAIN_DAYS=30
 
 **Step 3.** Grant execution permission for script file
 ```sh
-chmod +x mysql-backup.sh
+$ chmod +x mysql-backup.sh
 ```
 
 **Step 4.** Create a cron job to run script daily
 
 To open and configure crontab:
 ```
-crontab -e
+$ crontab -e
 ```
 
 Add new cron job (run at 2am everyday) and save it:
@@ -35,7 +35,7 @@ Add new cron job (run at 2am everyday) and save it:
 
 Restart cron service:
 ```
-systemctl restart crond
+$ systemctl restart crond
 ```
 
 ## Reference
