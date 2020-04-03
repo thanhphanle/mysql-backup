@@ -1,12 +1,12 @@
 # mysql-backup
 A simple way to backup MySQL database in bash script
 
-## How to setup backup script in CentOS
+## How to setup in CentOS
 
 **Step 1.** Clone or copy sh script into your machine at directory `/opt/scripts`
 
-**Step 2.** Open script and update config in section below:
-```
+**Step 2.** Open script file and update config in section below:
+```properties
 DB_BACKUP_PATH='/home/backup/mysql'
 MYSQL_HOST='localhost'
 MYSQL_PORT='3306'
@@ -18,7 +18,7 @@ BACKUP_RETAIN_DAYS=30
 
 **Step 3.** Grant execution permission for script file
 ```sh
-$ chmod +x mysql-backup.sh
+$ chmod +x /opt/scripts/mysql-backup.sh
 ```
 
 **Step 4.** Create a cron job to run script daily
@@ -33,7 +33,7 @@ Add new cron job (run at 2am everyday) and save it:
 0 2 * * * /opt/scripts/mysql-backup.sh
 ```
 
-Restart cron service:
+Restart cron service to apply new job:
 ```
 $ systemctl restart crond
 ```
